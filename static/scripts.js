@@ -17,12 +17,13 @@ function callcarb(c, status){
 
 function callvit(v, status){
 	if (status == "success"){
-		vit = parseFloat(v).toFixed(2);
-		l.refresh(vit);
+		vit = parseInt(v).toFixed(2);
+		$("#speed").focus();
+		$("#speed").val(vit);
+		$("#speed").submit();
 		setTimeout(getvit, 1000);
 	}
 }
-
 function gettemp(){
 	$.get('/temp', calltemp);
 }
