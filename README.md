@@ -1,5 +1,6 @@
 # Web-Display
-It's a web-based application that displays cars temperature, speed and fuel level
+It's a web-based application that displays cars temperature, speed and fuel level.
+Created with the Flask python framework for back-end, Jquery and Bootstrap for front-end
 
 <hr>
 <h3>Screenshot:</h3>
