@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
 	return render_template("index.html")
 
+@app.route('/charts')
+def charts():
+	return render_template("charts.html")
+
 @app.route('/data')
 def data():
 	t = random.random() * 100

@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$('div.button').fadeIn(2000).removeClass('hidden');
 	$("#start").click(function(){
 		$('div.gauge').fadeIn(1500).removeClass('hidden');
+		$('div.chart').fadeIn(1500).removeClass('hidden');
 	});
 });
 

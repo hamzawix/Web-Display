@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>charts</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="bootstrap.min.css") }}">
+	<script type="text/javascript" src="{{ url_for('static', filename="moment.js") }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename="Chart.js") }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename="jquery.min.js") }}"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="row" style="background-image: url({{ url_for('static', filename="data.jpg") }}); background-size: cover;">
+	<div class="col-xs-12" style="height: 60px;"></div>
+	<div class="container">
+			<div class="text-center">
+				<h1 style="color: ghostwhite;"><strong>Data Charts</strong></h1>
+				<div class="col-xs-12" style="height: 25px;"></div>
+				<a href="/" type="button" class="btn btn-primary btn-lg">Back to system</a>
+			</div>
+	</div>
+	<div class="col-xs-12" style="height: 50px;"></div>
+</div>
+<div class="row">
+	<div class="col-xs-12" style="height: 100px;"></div>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<div style="height: 450px; width: 500px;">
+			<canvas id="temp-chart"></canvas>
+		</div>
+	</div>
+	
+	<div class="col-md-4">
+		<div style="height: 450px; width: 500px;">
+			<canvas id="carb-chart"></canvas>
+		</div>
+	</div>
+	
+	<div class="col-md-4">
+		<div style="height: 450px; width: 500px;">
+			<canvas id="vit-chart"></canvas>
+		</div>
+	</div>
+	
+</div>
+	
+
+
+<script type="text/javascript">
+	var t = $("#temp-chart");
+	var tempChart = new Chart(t, {
+		type: 'line',
+
+		data: {
+			labels: ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+			datasets: [
+				{
+					borderColor: 'rgba(255, 36, 38, 0.9)',
+					backgroundColor: 'rgba(229, 44, 38, 0.6)',
+					animationDuration: 2000,
+					label: "Temperature(Minutes)",
+					data: [23, 23, 25, 24, 30, 30, 26, 23, 50, 80, 80, 99, 45, 22, 45]
+				}
+			]
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	var t = $("#carb-chart");
+	var tempChart = new Chart(t, {
+		type: 'line',
+
+		data: {
+			labels: ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+			datasets: [
+				{
+					borderColor: 'rgba(232, 165, 80, 1)',
+					backgroundColor: 'rgba(232, 165, 80, 0.6)',
+					
+					label: "Carburant(Minutes)",
+					data: [23, 23, 25, 24, 30, 30, 100, 23, 50, 60, 80, 99, 45, 22, 45]
+				}
+			]
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	var t = $("#vit-chart");
+	var tempChart = new Chart(t, {
+		type: 'line',
+
+		data: {
+			labels: ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"],
+			datasets: [
+				{
+					borderColor: 'rgba(45, 204, 80, 1)',
+					backgroundColor: 'rgba(45, 204, 80, 0.6)',
+					animationDuration: 2000,
+					label: "Vitesse(Minutes)",
+					data: [23, 40, 25, 24, 30, 30, 26, 55, 50, 60, 80, 99, 45, 22, 45]
+				}
+			]
+		}
+	});
+</script>
+</body>
+</html>
