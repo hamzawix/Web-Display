@@ -1,4 +1,11 @@
 
+$(document).ready(function(){
+	$('div.title').fadeIn(2000).removeClass('hidden');
+	$('div.button').fadeIn(2000).removeClass('hidden');
+	$("#start").click(function(){
+		$('div.gauge').fadeIn(1500).removeClass('hidden');
+	});
+});
 
 function getdata(){
 	$.getJSON('/data', function calldata(d){
