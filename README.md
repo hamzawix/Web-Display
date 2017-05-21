@@ -4,4 +4,4 @@ Created with the Flask python framework for back-end, Jquery and Bootstrap for f
 
 <hr>
 <h3>Screenshot:</h3>
-<img src="https://cloud.githubusercontent.com/assets/15115359/25909296/aa65e574-35a4-11e7-954c-459fbe7279fb.png">
+<img src="https://cloud.githubusercontent.com/assets/15115359/26285350/f23455b2-3e45-11e7-86a3-77a7a1b8339a.png">
